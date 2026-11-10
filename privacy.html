@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#73c2fb">
+  <meta name="description" content="Prudvin HRMS Privacy Policy: what personal information the Prudvin HRMS application collects, why, who can see it and how it is protected.">
+  <title>Privacy Policy | Prudvin HRMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f3f8fc;
+      --tint: #e6f0f7;
+      --ink: #183247;
+      --muted: #52697a;
+      --blue: #39789f;
+      --sky: #73c2fb;
+      --line: rgba(24, 50, 71, .15);
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'DM Sans', sans-serif;
+      --display: 'Manrope', sans-serif;
+      --page-gutter: clamp(16px, 5.6vw, 88px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; }
+    h1, h2, p, ul { margin-top: 0; }
+    .wrap { width: min(1200px, 100% - var(--page-gutter) * 2); margin-inline: auto; }
+    .eyebrow { margin: 0 0 18px; font: 700 11px var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--blue); }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 20; min-height: 82px; padding-inline: var(--page-gutter);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--paper); transition: box-shadow .25s;
+    }
+    .topbar.is-scrolled { box-shadow: 0 1px 0 var(--line); }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; padding: 5px 8px; }
+    .brand-logo { display: block; width: auto; height: 44px; max-width: min(230px, 100%); object-fit: contain; }
+    .nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); }
+    .nav a { font-size: 13px; text-decoration: none; }
+    .nav a:hover { color: var(--blue); }
+
+    .page-head { padding-block: clamp(56px, 8vw, 110px) clamp(36px, 5vw, 60px); border-bottom: 1px solid var(--line); }
+    h1 { max-width: 820px; margin-bottom: 18px; font: 500 clamp(40px, 6vw, 80px)/1.02 var(--serif); letter-spacing: -.035em; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px 24px; color: var(--muted); font-size: 13px; }
+    .meta b { color: var(--ink); font-weight: 700; }
+
+    .layout { display: grid; grid-template-columns: 240px 1fr; gap: clamp(32px, 6vw, 96px); padding-block: clamp(40px, 6vw, 80px) clamp(70px, 9vw, 120px); align-items: start; }
+    .toc { position: sticky; top: 106px; }
+    .toc p { margin-bottom: 12px; font: 700 11px var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+    .toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+    .toc a { display: block; padding: 7px 0 7px 16px; margin-left: -1px; border-left: 2px solid transparent; font-size: 13px; text-decoration: none; color: var(--muted); }
+    .toc a:hover { color: var(--ink); }
+    .toc a.is-active { border-left-color: var(--blue); color: var(--ink); font-weight: 600; }
+
+    .policy { max-width: 720px; }
+    .policy section { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--line); scroll-margin-top: 100px; }
+    .policy section:last-child { border-bottom: 0; margin-bottom: 0; }
+    .policy h2 { margin-bottom: 16px; font: 500 clamp(26px, 3vw, 34px)/1.15 var(--serif); letter-spacing: -.02em; }
+    .policy p, .policy li { color: #2c4558; font-size: 15.5px; line-height: 1.8; }
+    .policy p { margin-bottom: 14px; }
+    .policy strong { color: var(--ink); }
+    .policy ul { margin-bottom: 14px; padding-left: 20px; }
+    .policy li { margin-bottom: 6px; padding-left: 4px; }
+    .policy li::marker { color: var(--blue); }
+    code { padding: 2px 6px; border-radius: 4px; background: var(--tint); font: 500 .9em ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+    .data-list { display: grid; gap: 1px; margin: 0 0 8px; background: var(--line); border: 1px solid var(--line); }
+    .data-list div { padding: 16px 18px; background: var(--paper); }
+    .data-list dt { margin-bottom: 4px; font: 700 14px var(--display); }
+    .data-list dd { margin: 0; color: #2c4558; font-size: 14.5px; line-height: 1.7; }
+    .note { padding: 18px 20px; border-left: 3px solid var(--sky); background: var(--tint); }
+    .note p:last-child { margin-bottom: 0; }
+
+    footer { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); color: #58615a; font-size: 11px; }
+    footer p { margin: 0; }
+    footer nav { display: flex; gap: 18px; }
+    footer nav a { text-decoration: none; }
+    footer nav a:hover { color: var(--blue); }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; gap: 28px; }
+      .toc { position: static; padding: 18px; border: 1px solid var(--line); }
+      .toc ol { columns: 2; column-gap: 16px; border-left: 0; }
+      .toc a { padding: 6px 0; border-left: 0; margin: 0; }
+      .toc a.is-active { font-weight: 400; }
+    }
+    @media (max-width: 760px) {
+      .topbar { min-height: 68px; }
+      .brand-logo { height: 36px; }
+      .policy section { scroll-margin-top: 84px; }
+      .policy p, .policy li { font-size: 15px; }
+    }
+    @media (max-width: 480px) {
+      .nav a:not(.keep) { display: none; }
+      .toc ol { columns: 1; }
+      footer { flex-direction: column; align-items: flex-start; justify-content: center; padding-block: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Prudvin home">
+      <img class="brand-logo" src="logo.png" alt="Prudvin">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="keep" href="index.html">← Home</a>
+      <a href="hrms.html">HRMS</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-head wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Prudvin HRMS Privacy Policy</h1>
+      <div class="meta">
+        <span><b>Last updated:</b> <time datetime="2026-11-10">10 November 2026</time></span>
+        <span><b>Applies to:</b> Prudvin HRMS web and Android app</span>
+      </div>
+    </div>
+
+    <div class="layout wrap">
+      <nav class="toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#collect">Information we collect</a></li>
+          <li><a href="#use">How we use your information</a></li>
+          <li><a href="#access">Who can see your information</a></li>
+          <li><a href="#security">Data storage and security</a></li>
+          <li><a href="#retention">Data retention</a></li>
+          <li><a href="#rights">Your rights</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <article class="policy">
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>This policy explains what personal information the Prudvin HRMS application collects from employees of the organizations that use it, why it is collected, and how it is protected. Prudvin HRMS is an internal human resources, project and payroll system, available on the web and as an Android app (package <code>com.prudvin.sbphrms</code>). It is built for employees and managers of your organization and is not a public consumer service — access requires a login issued by your organization.</p>
+        </section>
+
+        <section id="collect">
+          <h2>Information We Collect</h2>
+          <dl class="data-list">
+            <div><dt>Identity and contact details</dt><dd>First and last name, gender, date of birth, personal and official email, personal and official phone number, home address, blood group, and government ID / passport numbers where recorded.</dd></div>
+            <div><dt>Employment and organizational data</dt><dd>Designation, department, branch, grade, date of joining/confirmation/relieving, your reporting manager, and the people who report to you.</dd></div>
+            <div><dt>Leave, WFH and attendance records</dt><dd>Dates and type of each leave or work-from-home request, its approval status, who approved or rejected it, and any comments submitted with it.</dd></div>
+            <div><dt>Project and timesheet data</dt><dd>Client/project assignments, whether you are the primary assignee on a project, and the hours you log per day and week, with their approval status.</dd></div>
+            <div><dt>Payroll and financial data</dt><dd>Pay components, bank account and IFSC details used for salary disbursement, generated payslips and payroll registers. Finance-team users may also see supplier, invoice, expense and bank-statement records.</dd></div>
+            <div><dt>Login and access data</dt><dd>Your employee ID and password (stored as a one-way hash, never in plain text), session tokens, and the role-based permissions assigned to your account.</dd></div>
+            <div><dt>Device data</dt><dd>The Android app requests only the Internet permission. It does not access your camera, location, contacts or microphone, and it only reads or writes files you explicitly export or attach (for example, an Excel report or an offer letter).</dd></div>
+          </dl>
+        </section>
+
+        <section id="use">
+          <h2>How We Use Your Information</h2>
+          <ul>
+            <li>Maintain HR records, organizational charts and reporting lines</li>
+            <li>Route leave and WFH requests to the correct current approver, computed from the live reporting hierarchy</li>
+            <li>Record, review and approve project hours for billing, utilization and payroll</li>
+            <li>Generate payroll, payslips and related financial records</li>
+            <li>Show you your own dashboard, calendar and notifications, and show managers the status of people who report to them</li>
+            <li>Enforce role-based access so each account only sees the information its assigned role permits</li>
+            <li>Keep an audit trail of who approved or rejected a request, and when</li>
+          </ul>
+        </section>
+
+        <section id="access">
+          <h2>Who Can See Your Information</h2>
+          <ul>
+            <li><strong>You</strong>, for your own records</li>
+            <li><strong>Your current manager</strong>, and anyone above them in the live reporting line, for leave/WFH approval and timesheet review</li>
+            <li><strong>Project leads</strong>, for project-scoped timesheet approval</li>
+            <li><strong>HR and payroll administrators</strong>, for the records their role authorizes them to manage</li>
+            <li><strong>System administrators</strong>, for operating and maintaining the application</li>
+          </ul>
+          <div class="note">
+            <p>Access at every level above follows the role-based permissions assigned to that account — a manager only sees people currently reporting to them, and a project lead only sees timesheets for their own projects. We do not sell personal information or share it with advertisers. Information is not shared outside your organization except where required by law (for example, statutory payroll filings) or with a service provider that helps operate the system (for example, hosting).</p>
+          </div>
+        </section>
+
+        <section id="security">
+          <h2>Data Storage and Security</h2>
+          <ul>
+            <li>Data is stored in your organization's own database and reached only through an authenticated session.</li>
+            <li>Permissions are checked per module and per action (create, read, update, delete), down to the single record where the reporting hierarchy applies.</li>
+            <li>Passwords are stored as a one-way hash (bcrypt) and are never stored or logged in plain text.</li>
+            <li>The Android app talks to the server only over HTTPS.</li>
+            <li>Change-of-manager and similar organizational edits are validated to prevent inconsistent reporting lines (for example, a manager cannot be reassigned to report into their own report).</li>
+          </ul>
+        </section>
+
+        <section id="retention">
+          <h2>Data Retention</h2>
+          <p>We keep HR, payroll and timesheet records for as long as you remain employed by your organization, and afterward for as long as Indian statutory, tax and labor-law record-keeping requirements apply. Leave, WFH and timesheet history is kept so approvers can see a trailing record (for example, the last six months) when reviewing a new request.</p>
+        </section>
+
+        <section id="rights">
+          <h2>Your Rights</h2>
+          <ul>
+            <li>View your own personal, employment, leave, timesheet and payroll information inside the app</li>
+            <li>Ask HR to correct inaccurate personal information</li>
+            <li>Ask who approved or rejected a decision affecting your leave, WFH or timesheet records, and when</li>
+            <li>Raise a question or concern about how your information is used, through HR or your system administrator</li>
+          </ul>
+        </section>
+
+        <section id="children">
+          <h2>Children's Privacy</h2>
+          <p>Prudvin HRMS is an internal workplace tool for your organization's employees. It is not directed at, and is not knowingly used by, anyone under 18.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Changes to This Policy</h2>
+          <p>We may update this policy from time to time, for example as the application gains new features. Material changes will be communicated inside the app or by email, and the "last updated" date at the top of this page will be updated.</p>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>For questions about this policy or your personal information in Prudvin HRMS, contact your HR department or system administrator at your organization.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    <a class="brand" href="index.html" aria-label="Prudvin home">
+      <img class="brand-logo" src="logo.png" alt="Prudvin">
+    </a>
+    <nav aria-label="Footer"><a href="hrms.html">HRMS</a><a href="privacy.html" aria-current="page">HRMS Privacy Policy</a></nav>
+    <p>© 2026 Prudvin</p>
+  </footer>
+
+  <script>
+    const header = document.querySelector('.topbar');
+    addEventListener('scroll', () => header.classList.toggle('is-scrolled', scrollY > 10), { passive: true });
+    const links = [...document.querySelectorAll('.toc a')];
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + e.target.id));
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    document.querySelectorAll('.policy section').forEach(s => io.observe(s));
+  </script>
+</body>
+</html>

@@ -116,6 +116,10 @@
       display: flex; flex-direction: column; justify-content: space-between; transition: background .2s;
     }
     .module:hover { background: rgba(255,255,255,.48); }
+    .module-link { color: inherit; text-decoration: none; cursor: pointer; }
+    .module-link:hover { background: white; }
+    .module-link:hover .module-arrow { transform: translate(2px, -2px); }
+    .module-arrow { transition: transform .2s; }
     .module-top { display: flex; justify-content: space-between; align-items: start; }
     .module-code { font: 800 25px var(--display); letter-spacing: -.045em; }
     .module-arrow { color: var(--blue); font-size: 19px; }
@@ -264,7 +268,7 @@
         </div>
         <div class="module-grid">
           <article class="module"><div class="module-top"><span class="module-code">PAY</span><span class="module-arrow" aria-hidden="true">↗</span></div><div><h3>Payroll</h3><p>Accurate, dependable payroll workflows.</p></div></article>
-          <article class="module"><div class="module-top"><span class="module-code">HRMS</span><span class="module-arrow" aria-hidden="true">↗</span></div><div><h3>People &amp; HR</h3><p>Clearer employee and people operations.</p></div></article>
+          <a class="module module-link" href="hrms.html" aria-label="HRMS: explore the People and HR product"><div class="module-top"><span class="module-code">HRMS</span><span class="module-arrow" aria-hidden="true">↗</span></div><div><h3>People &amp; HR</h3><p>Clearer employee and people operations.</p></div></a>
           <article class="module"><div class="module-top"><span class="module-code">FI</span><span class="module-arrow" aria-hidden="true">↗</span></div><div><h3>Finance</h3><p>Connected financial control and insight.</p></div></article>
           <article class="module"><div class="module-top"><span class="module-code">BP</span><span class="module-arrow" aria-hidden="true">↗</span></div><div><h3>Business planning</h3><p>Align goals, budgets, and operational plans.</p></div></article>
           <article class="module"><div class="module-top"><span class="module-code">PM</span><span class="module-arrow" aria-hidden="true">↗</span></div><div><h3>Project management</h3><p>Align work, teams, timelines, and budgets.</p></div></article>
